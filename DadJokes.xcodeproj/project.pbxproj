@@ -14,6 +14,7 @@
 		6DEDCC2727C544C6005DCE8F /* DadJokesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEDCC2627C544C6005DCE8F /* DadJokesTests.swift */; };
 		6DEDCC3127C544C6005DCE8F /* DadJokesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEDCC3027C544C6005DCE8F /* DadJokesUITests.swift */; };
 		6DEDCC3327C544C6005DCE8F /* DadJokesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEDCC3227C544C6005DCE8F /* DadJokesUITestsLaunchTests.swift */; };
+		6DEDCC4227C54A45005DCE8F /* DadJokes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEDCC4127C54A45005DCE8F /* DadJokes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		6DEDCC2C27C544C6005DCE8F /* DadJokesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DadJokesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DEDCC3027C544C6005DCE8F /* DadJokesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DadJokesUITests.swift; sourceTree = "<group>"; };
 		6DEDCC3227C544C6005DCE8F /* DadJokesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DadJokesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6DEDCC4127C54A45005DCE8F /* DadJokes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DadJokes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				6DEDCC1527C544BE005DCE8F /* DadJokesApp.swift */,
-				6DEDCC1727C544BE005DCE8F /* ContentView.swift */,
+				6DEDCC4027C549F6005DCE8F /* Views */,
+				6DEDCC3F27C549EC005DCE8F /* Model */,
 				6DEDCC1927C544C5005DCE8F /* Assets.xcassets */,
 				6DEDCC1B27C544C5005DCE8F /* Preview Content */,
 			);
@@ -125,6 +128,22 @@
 				6DEDCC3227C544C6005DCE8F /* DadJokesUITestsLaunchTests.swift */,
 			);
 			path = DadJokesUITests;
+			sourceTree = "<group>";
+		};
+		6DEDCC3F27C549EC005DCE8F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6DEDCC4127C54A45005DCE8F /* DadJokes.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6DEDCC4027C549F6005DCE8F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6DEDCC1727C544BE005DCE8F /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DEDCC1827C544BE005DCE8F /* ContentView.swift in Sources */,
+				6DEDCC4227C54A45005DCE8F /* DadJokes.swift in Sources */,
 				6DEDCC1627C544BE005DCE8F /* DadJokesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
