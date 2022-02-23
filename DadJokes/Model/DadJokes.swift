@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct DadJoke: Decodable {
-    let id:String
+struct DadJoke: Decodable, Hashable {
+    let id: String
     let joke: String
     let status: Int
 }

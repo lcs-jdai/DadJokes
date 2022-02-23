@@ -11,6 +11,10 @@ struct ContentView: View {
     
     @State var currentJoke: DadJoke = DadJoke(id: "", joke: "Knock, knock...", status: 0)
     
+    @State var favourites: [DadJoke] = []
+    
+    
+    @State var currentJokeAddedToFavourites: Bool = false
     var body: some View {
         VStack {
             
@@ -28,8 +32,16 @@ struct ContentView: View {
            
                 Image(systemName: "heart.circle")
                     .resizable()
-                    .foregroundColor(.gray)
+                    .foregroundColor(currentJokeAddedToFavourites == true ? .red : .secondary)
                     .frame(width: 35, height: 35, alignment: .center)
+                    .onTapGesture {
+                        if currentJokeAddedToFavourites == false {
+                            favourites.append(currentJoke)
+                            
+                            currentJokeAddedToFavourites == true
+                        }
+                    }
+          
             
             Button(action: {
                 //MARK: call the function that will get us a new joke
@@ -52,10 +64,8 @@ struct ContentView: View {
             }
             
             
-            List {
-                Text("Which side of the chicken has more feathers? The outside.")
-                Text("Why did the Clydesdale give the pony a glass of water? Because he was a little horse!")
-                Text("The great thing about stationery shops is they're always in the same place...")
+            List(favourites, id: \.self）{ currentFavourite in
+                Text(currentFavourite.joke)
             }
             
             Spacer()
@@ -109,6 +119,8 @@ struct ContentView: View {
             //                                         |
             //                                         V
             currentJoke = try JSONDecoder().decode(DadJoke.self, from: data)
+            
+            currentJokeAddedToFavourites = false
             
         } catch {
             print("Could not retrieve or decode the JSON from endpoint.")
